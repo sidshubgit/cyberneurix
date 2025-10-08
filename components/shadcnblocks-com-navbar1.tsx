@@ -149,18 +149,19 @@ const Navbar1 = ({
     <section className="py-4">
       <div className="container">
         <nav className="hidden justify-between lg:flex">
-          <a href={logo.url} className="flex items-center gap-2">
-              <img src={logo.src} className="w-8" alt={logo.alt} />
-              <span className="text-lg font-semibold">{logo.title}</span>
-            </a>
-            <div className="flex items-center">
-              <NavigationMenu>
-                <NavigationMenuList>
-                  {menu.map((item) => renderMenuItem(item))}
-                </NavigationMenuList>
-              </NavigationMenu>
+          <div className="flex items-center">
+            <a href={logo.url} className="flex items-center gap-2">
+                <img src={logo.src} className="w-8" alt={logo.alt} />
+                <span className="text-lg font-semibold">{logo.title}</span>
+              </a>
+              <div className="flex items-center">
+                <NavigationMenu>
+                  <NavigationMenuList>
+                    {menu.map((item) => renderMenuItem(item))}
+                  </NavigationMenuList>
+                </NavigationMenu>
+              </div>
             </div>
-          </div>
           <div className="flex gap-2">
             <Button asChild variant="outline" size="sm">
               <a href={auth.login.url}>{auth.login.text}</a>
