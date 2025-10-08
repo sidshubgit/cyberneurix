@@ -155,7 +155,7 @@ const Navbar1 = ({
                 <span className="text-lg font-semibold">{logo.title}</span>
               </a>
               <div>Navigation Placeholder</div>
-            </div>
+          </div>
           <div className="flex gap-2">
             <Button asChild variant="outline" size="sm">
               <a href={auth.login.url}>{auth.login.text}</a>
