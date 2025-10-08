@@ -53,6 +53,7 @@ export const StickyTabsDemoPage: React.FC = () => {
         >
           <StickyTabItem title="Cybersecurity — Defend the Digital Frontier" id="concept">
             <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
+              <img src="/cybersecurity-services.png" alt="Cybersecurity Services" className="mb-4 w-32 h-32" />
               <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
                 Cybersecurity Insights
               </h3>
