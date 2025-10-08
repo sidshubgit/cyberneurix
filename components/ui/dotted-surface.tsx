@@ -116,14 +116,7 @@ i++;
 positionAttribute.needsUpdate = true;
 
 // Update point sizes based on wave
-const customMaterial = material as THREE.PointsMaterial & {
-uniforms?: any;
-};
-if (!customMaterial.uniforms) {
-// For dynamic size changes, we'd need a custom shader
-// For now, keeping constant size for performance
-}
-
+// Removed unnecessary type assertion and empty if block related to 'uniforms' property.
 renderer.render(scene, camera);
 count += 0.1;
 };

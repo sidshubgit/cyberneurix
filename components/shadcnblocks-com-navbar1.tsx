@@ -149,6 +149,7 @@ const Navbar1 = ({
     <section className="py-4">
       <div className="container">
         <nav className="hidden justify-between lg:flex">
+          <a href={logo.url} className="flex items-center gap-2">
               <img src={logo.src} className="w-8" alt={logo.alt} />
               <span className="text-lg font-semibold">{logo.title}</span>
             </a>

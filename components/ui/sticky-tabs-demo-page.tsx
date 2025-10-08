@@ -22,7 +22,7 @@ const PlaceholderContent: React.FC<{ title: string }> = ({ title }) => (
       Content Area: {title}
     </h3>
     <p className="text-gray-500 max-w-xl">
-      This is where the detailed content for the '{title}' section would normally appear. For this demo, we're using this placeholder.
+      This is where the detailed content for the &apos;{title}&apos; section would normally appear. For this demo, we&apos;re using this placeholder.
     </p>
   </div>
 );
