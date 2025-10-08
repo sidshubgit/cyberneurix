@@ -78,6 +78,11 @@ const demoData = {
       ],
     },
     {
+      title: "Consulting services",
+      url: "/consulting-services",
+      icon: <img src="/cybersecurity-services.png" alt="Consulting Services" className="size-5 shrink-0" />,
+    },
+    {
       title: "Blogs",
       url: "#",
       items: [
