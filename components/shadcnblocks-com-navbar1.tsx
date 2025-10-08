@@ -154,13 +154,7 @@ const Navbar1 = ({
                 <img src={logo.src} className="w-8" alt={logo.alt} />
                 <span className="text-lg font-semibold">{logo.title}</span>
               </a>
-              <div className="flex items-center">
-                <NavigationMenu>
-                  <NavigationMenuList>
-                    {menu.map((item) => renderMenuItem(item))}
-                  </NavigationMenuList>
-                </NavigationMenu>
-              </div>
+              <div>Navigation Placeholder</div>
             </div>
           <div className="flex gap-2">
             <Button asChild variant="outline" size="sm">
