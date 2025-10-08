@@ -149,21 +149,7 @@ const Navbar1 = ({
     <section className="py-4">
       <div className="container">
         <nav className="hidden justify-between lg:flex">
-          <div className="flex items-center">
-            <a href={logo.url} className="flex items-center gap-2">
-                <img src={logo.src} className="w-8" alt={logo.alt} />
-                <span className="text-lg font-semibold">{logo.title}</span>
-              </a>
-              <div>Navigation Placeholder</div>
-          </div>
-          <div className="flex gap-2">
-            <Button asChild variant="outline" size="sm">
-              <a href={auth.login.url}>{auth.login.text}</a>
-            </Button>
-            <Button asChild size="sm">
-              <a href={auth.signup.url}>{auth.signup.text}</a>
-            </Button>
-          </div>
+          <div>Test Nav</div>
         </nav>
         <div className="block lg:hidden">
           <div className="flex items-center justify-between">
