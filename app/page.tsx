@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[auto_auto_1fr_auto] items-center min-h-screen">
       <div className="row-start-1 w-full mx-auto">
-        <Navbar1Demo />
+        {/* <Navbar1Demo /> */}
       </div>
       <main className="relative z-10 flex flex-col row-start-2 mx-auto">
         <HeroSectionBasic />
