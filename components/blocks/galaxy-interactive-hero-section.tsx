@@ -59,7 +59,7 @@ function HeroContent() {
   return (
     <div className="text-left text-white pt-16 sm:pt-24 md:pt-32 px-4 max-w-3xl">
       <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold mb-4 leading-tight tracking-wide">
-        Where <br className="sm:hidden" />CyberSecurity<br className="sm:hidden" /> Meets Human Intelligence.
+        Neurons <br />that <br />Defend Networks
       </h1>
       <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 opacity-80 max-w-xl">
         Explore the Future of Secure Digital Ecosystems & Neuro Technology Innovation

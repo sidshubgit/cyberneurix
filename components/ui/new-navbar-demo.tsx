@@ -1,18 +1,8 @@
-import {
-  Book,
-  Newspaper,
-  Mic,
-  FlaskConical,
-  Brain,
-  Shield,
-  Scale,
-  PenTool,
-  TrendingUp,
-  LineChart,
-  Image,
-} from "lucide-react";
-
-import { Navbar1 } from "@/components/ui/shadcnblocks-com-navbar1";
+"use client";
+import React, { useState } from "react";
+import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
+import { cn } from "@/lib/utils";
+import { Book, Newspaper, Mic, FlaskConical, Brain, Shield, Scale, PenTool, TrendingUp, LineChart, Image as LucideImage, Briefcase } from "lucide-react";
 
 const demoData = {
   logo: {
@@ -51,6 +41,12 @@ const demoData = {
           icon: <FlaskConical className="size-5 shrink-0" />,
           url: "/cybersecurity/tutorials-labs",
         },
+        {
+          title: "Consulting services",
+          description: "Expert guidance for your cybersecurity needs",
+          icon: <Briefcase className="size-5 shrink-0" />,
+          url: "/consulting-services",
+        },
       ],
     },
     {
@@ -64,7 +60,7 @@ const demoData = {
           url: "/neurotechnology/research-breakthroughs",
         },
         {
-          title: "Mind & Machine Security",
+          title: "Brain-Computer Interfaces",
           description: "Securing BCIs and neural interfaces",
           icon: <Shield className="size-5 shrink-0" />,
           url: "/neurotechnology/mind-machine-security",
@@ -75,12 +71,13 @@ const demoData = {
           icon: <Scale className="size-5 shrink-0" />,
           url: "/neurotechnology/ai-neural-ethics",
         },
+        {
+          title: "Neural Frontier",
+          description: "Exploring the cutting edge of neural technology",
+          icon: <Brain className="size-5 shrink-0" />,
+          url: "/neurotechnology/neural-frontier",
+        },
       ],
-    },
-    {
-      title: "Consulting services",
-      url: "/consulting-services",
-      icon: <img src="/cybersecurity-services.png" alt="Consulting Services" className="size-5 shrink-0" />,
     },
     {
       title: "Blogs",
@@ -119,12 +116,11 @@ const demoData = {
         {
           title: "Infographics and Visuals",
           description: "Charts, visuals, and explainer graphics",
-          icon: <Image className="size-5 shrink-0" />,
+          icon: <LucideImage className="size-5 shrink-0" />,
           url: "/signals/infographics-visuals",
         },
       ],
     },
-
   ],
   mobileExtraLinks: [
     { name: "Press", url: "/press" },
@@ -138,13 +134,49 @@ const demoData = {
   },
 };
 
-function Navbar1Demo() {
-  return <Navbar1 {...demoData} />;
+function Navbar({ className }: { className?: string }) {
+  const [active, setActive] = useState<string | null>(null);
+  return (
+    <div
+      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+    >
+      <Menu setActive={setActive}>
+        {demoData.menu.map((item) => (
+          <MenuItem
+            key={item.title}
+            setActive={setActive}
+            active={active}
+            item={item.title}
+            href={item.items ? undefined : item.url}
+          >
+            {item.items ? (
+              <div className="text-sm grid grid-cols-2 gap-10 p-4">
+                {item.items.map((subItem) => (
+                  subItem.icon ? (
+                    <ProductItem
+                      key={subItem.url}
+                      title={subItem.title}
+                      href={subItem.url}
+                      icon={subItem.icon}
+                      description={subItem.description}
+                    />
+                  ) : (
+                    <HoveredLink key={subItem.url} href={subItem.url}>{subItem.title}</HoveredLink>
+                  )
+                ))}
+              </div>
+            ) : null}
+          </MenuItem>
+        ))}
+      </Menu>
+    </div>
+  );
 }
 
-export { Navbar1Demo };
-
-
-
-
-
+export function NewNavbarDemo() {
+  return (
+    <div className="relative w-full flex items-center justify-center">
+      <Navbar className="top-2" />
+    </div>
+  );
+}

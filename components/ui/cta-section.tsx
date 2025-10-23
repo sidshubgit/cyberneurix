@@ -1,5 +1,6 @@
 import React from "react";
 import { Vortex } from "@/components/ui/vortex";
+import CircledTm from "./circled-tm";
 
 function CtaSection() {
   return (
@@ -8,11 +9,10 @@ function CtaSection() {
         backgroundColor="black"
         className="flex items-center flex-col justify-center px-2 md:px-10 py-4 w-full h-full"
       >
-        <h2 className="text-white text-2xl md:text-6xl font-bold text-center">
-          Stay Ahead of Cyber & Neuro Trends
-        </h2>
-        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-          Read Latest Insights & Subscribe for Updates
+                  <h2 className="text-white text-2xl md:text-6xl text-center">
+                    <span className="font-bold">NEURIX</span><CircledTm /> <span className="md:text-4xl"><span className="font-bold">N</span>eural <span className="font-bold">E</span>ngine for <span className="font-bold">U</span>nified <span className="font-bold">R</span>esilience and <span className="font-bold">I</span>ntegrated security e<span className="font-bold">X</span>change</span>
+                  </h2>        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+          Integrated Intelligence. Executed Security
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
           <button className="px-4 py-2 bg-blue-600 hover:bg-blue-700 transition duration-200 rounded-lg text-white shadow-[0px_2px_0px_0px_#FFFFFF40_inset]">

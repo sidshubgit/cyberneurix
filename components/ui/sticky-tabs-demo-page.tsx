@@ -33,11 +33,9 @@ export const StickyTabsDemoPage: React.FC = () => {
       <div>
         <div className="bg-black text-white">
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
-  <h1 className="text-2xl font-bold tracking-tight sm:text-4xl lg:text-5xl">Blogs</h1><br/>
-            <h2 className="text-lg font-bold tracking-tight sm:text-xl lg:text-2xl">
-              Welcome to the CyberNeurix Insights Hub — where technology meets thought.<br/>
-  Explore conversations, ideas, and innovations shaping the future of security, cognition, and human intelligence.
-            </h2>
+          <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 flex flex-col items-center text-center">
+            <img src="/blog-image.png" alt="Blogs" className="mb-8 w-full h-auto" />
+          </div>
           </div>
         </div>
         <StickyTabs
@@ -53,78 +51,21 @@ export const StickyTabsDemoPage: React.FC = () => {
         >
           <StickyTabItem title="Cybersecurity — Defend the Digital Frontier" id="concept">
             <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/cybersecurity-services.png" alt="Cybersecurity Services" className="mb-4 w-32 h-32" />
               <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
                 Cybersecurity Insights
               </h3>
-              <p className="text-gray-500 max-w-xl">
-                Explore the latest threats, defense strategies, and best practices to secure your digital assets.
+              <p className="text-gray-500 max-w-xl text-lg md:text-xl">
+                In this section, expect deep insights into the evolving landscape of digital defense — from the latest threat intelligence and security frameworks to case studies on how organizations are turning protection into strategy. Each article translates complexity into clarity, helping leaders understand not just how to respond to cyber risks, but how to stay three steps ahead.
               </p>
             </div>
           </StickyTabItem>
           <StickyTabItem title="NeuroTechnology — Where Mind Meets Machine" id="design">
             <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/neural-frontier.png" alt="NeuroTechnology Breakthroughs" className="mb-4 w-32 h-32" />
               <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
                 Neurotechnology Breakthroughs
               </h3>
-              <p className="text-gray-500 max-w-xl">
-                Dive into the convergence of neuroscience and technology, and its implications for security and human potential.
-              </p>
-            </div>
-          </StickyTabItem>
-          <StickyTabItem title="Knowledge Base — Deep Dive into Digital Defense" id="knowledgebase">
-            <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/knowledgebase.png" alt="Knowledge Base" className="mb-4 w-32 h-32" />
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
-                Knowledge Base
-              </h3>
-              <p className="text-gray-500 max-w-xl">
-                Access a comprehensive library of articles, whitepapers, and case studies on cybersecurity and neurotechnology.
-              </p>
-            </div>
-          </StickyTabItem>
-          <StickyTabItem title="News & Trends — Stay Ahead of the Curve" id="news-trends">
-            <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/news-and-trends.png" alt="News & Trends" className="mb-4 w-32 h-32" />
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
-                News & Trends
-              </h3>
-              <p className="text-gray-500 max-w-xl">
-                Get the latest updates, analyses, and expert opinions on the evolving landscape of digital security and brain-computer interfaces.
-              </p>
-            </div>
-          </StickyTabItem>
-          <StickyTabItem title="Threat Reports — Uncover the Digital Underbelly" id="threat-reports">
-            <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/threat-reports.png" alt="Threat Reports" className="mb-4 w-32 h-32" />
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
-                Threat Reports
-              </h3>
-              <p className="text-gray-500 max-w-xl">
-                Detailed reports on emerging cyber threats, vulnerabilities, and attack vectors, providing actionable intelligence for defense.
-              </p>
-            </div>
-          </StickyTabItem>
-          <StickyTabItem title="Tutorials & Labs — Hands-on Learning" id="tutorials-labs">
-            <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/tutorials-and-labs.png" alt="Tutorials & Labs" className="mb-4 w-32 h-32" />
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
-                Tutorials & Labs
-              </h3>
-              <p className="text-gray-500 max-w-xl">
-                Engage in practical exercises and guided tutorials to enhance your skills in cybersecurity and neurotechnology.
-              </p>
-            </div>
-          </StickyTabItem>
-          <StickyTabItem title="Podcasts & Webinars — Listen & Learn" id="podcasts-webinars">
-            <div className="flex flex-col items-center justify-center text-center py-16 h-[50vh]">
-              <img src="/podcasts-and-webinars.png" alt="Podcasts & Webinars" className="mb-4 w-32 h-32" />
-              <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
-                Podcasts & Webinars
-              </h3>
-              <p className="text-gray-500 max-w-xl">
-                Tune into expert discussions, interviews, and presentations on the latest advancements and challenges in our fields.
+              <p className="text-gray-500 max-w-xl text-lg md:text-xl">
+                Here, technology becomes human. Discover how neurotech, brain-computer interfaces, and cognitive computing are reshaping how we think, work, and secure digital systems. These articles bridge neuroscience and innovation, exploring the frontier where biological intelligence and artificial systems begin to merge.
               </p>
             </div>
           </StickyTabItem>
@@ -133,8 +74,8 @@ export const StickyTabsDemoPage: React.FC = () => {
               <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
                 In-depth Analysis
               </h3>
-              <p className="text-gray-500 max-w-xl">
-                Read our curated articles on cutting-edge research and thought leadership in cybersecurity and neurotechnology.
+              <p className="text-gray-500 max-w-xl text-lg md:text-xl">
+                A curated space for thought leadership and breakthrough ideas from CyberNeurix and the wider industry. Expect long-form reads that challenge conventional thinking — exploring how technology, ethics, and cognition will define the next decade of cybersecurity and neuro-intelligence.
               </p>
             </div>
           </StickyTabItem>
@@ -143,7 +84,7 @@ export const StickyTabsDemoPage: React.FC = () => {
               <h3 className="text-xl font-semibold mt-4 mb-2 text-gray-200">
                 Stay Updated
               </h3>
-              <p className="text-gray-500 max-w-xl">
+              <p className="text-gray-500 max-w-xl text-lg md:text-xl">
                 Designed for fast minds and busy schedules, this section delivers concise, high-impact insights. From rapid reads and short explainers to visual summaries and podcast snippets — stay informed, inspired, and ahead of the curve in minutes, not hours.
               </p>
             </div>

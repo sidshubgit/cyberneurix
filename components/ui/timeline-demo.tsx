@@ -13,7 +13,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/knowledgebase.png"
+              src="/kb.png"
               alt="startup template"
               fill
               style={{ objectFit: "contain" }}
@@ -31,7 +31,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/news-and-trends.png"
+              src="/newtre.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -49,7 +49,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/threat-reports.png"
+              src="/threpo.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -67,7 +67,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/tutorials-and-labs.png"
+              src="/tutlabs.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -85,7 +85,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/podcasts-and-webinars.png"
+              src="/podweb.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -95,15 +95,15 @@ export function TimelineDemo() {
       ),
     },
     {
-      title: "Services",
+      title: "Consulting Services",
       content: (
-        <div key="Services">
+        <div key="Consulting Services">
           <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm mb-4">
             Discover how CyberNeurix translates intelligence into tailored security architectures, governance frameworks, and managed defense. We don’t just secure systems — we evolve them.
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/cybersecurity-services.png"
+              src="/cons.png"
               alt="cybersecurity services"
               fill
               style={{ objectFit: "contain" }}
