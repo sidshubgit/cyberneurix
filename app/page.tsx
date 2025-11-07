@@ -13,18 +13,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="font-sans grid grid-rows-[auto_auto_1fr_auto] items-center min-h-screen">
-      {/* Logo at top-left */}
-      <div className="absolute top-4 left-4 z-50">
-        <Link href="/">
-          <Image
-            src="/cyberneurix-logo.png"
-            alt="CyberNeurix logo"
-            width={80} // Adjust size as needed
-            height={80} // Adjust size as needed
-            className="rounded-full w-16 h-16 md:w-20 md:h-20" // Responsive classes
-          />
-        </Link>
-      </div>
       <div className="row-start-1 w-full mx-auto">
         <NewNavbarDemo />
       </div>

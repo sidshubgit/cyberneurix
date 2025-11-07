@@ -34,7 +34,7 @@ export const StickyTabsDemoPage: React.FC = () => {
         <div className="bg-black text-white">
           <div className="mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 flex flex-col items-center text-center">
-            <img src="/blog-image.png" alt="Blogs" className="mb-8 w-full h-auto" />
+            <img src="./blog-image.png" alt="Blogs" className="mb-8 w-full h-auto" />
           </div>
           </div>
         </div>

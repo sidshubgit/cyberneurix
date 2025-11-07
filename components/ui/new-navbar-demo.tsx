@@ -2,7 +2,9 @@
 import React, { useState } from "react";
 import { HoveredLink, Menu, MenuItem, ProductItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/lib/utils";
-import { Book, Newspaper, Mic, FlaskConical, Brain, Shield, Scale, PenTool, TrendingUp, LineChart, Image as LucideImage, Briefcase } from "lucide-react";
+import { Book, Newspaper, Mic, FlaskConical, Brain, Shield, Scale, PenTool, TrendingUp, LineChart, Image as LucideImage, Briefcase, MenuIcon, XIcon } from "lucide-react";
+import Link from "next/link";
+import Image from "next/image";
 
 const demoData = {
   logo: {
@@ -15,7 +17,7 @@ const demoData = {
     { title: "Home", url: "/" },
     {
       title: "Cybersecurity",
-      url: "#",
+      url: "/cybersecurity",
       items: [
         {
           title: "Knowledge Base",
@@ -134,41 +136,97 @@ const demoData = {
   },
 };
 
-function Navbar({ className }: { className?: string }) {
+function Navbar({ className, top = "top-0" }: { className?: string; top?: string }) {
   const [active, setActive] = useState<string | null>(null);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div
-      className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
+      className={cn("fixed inset-x-0 w-full z-50 px-4", top, className)}
     >
-      <Menu setActive={setActive}>
-        {demoData.menu.map((item) => (
-          <MenuItem
-            key={item.title}
-            setActive={setActive}
-            active={active}
-            item={item.title}
-            href={item.items ? undefined : item.url}
-          >
-            {item.items ? (
-              <div className="text-sm grid grid-cols-2 gap-10 p-4">
-                {item.items.map((subItem) => (
-                  subItem.icon ? (
-                    <ProductItem
-                      key={subItem.url}
-                      title={subItem.title}
-                      href={subItem.url}
-                      icon={subItem.icon}
-                      description={subItem.description}
-                    />
-                  ) : (
-                    <HoveredLink key={subItem.url} href={subItem.url}>{subItem.title}</HoveredLink>
-                  )
-                ))}
+              <div className="flex justify-between items-center py-2">
+                {/* Mobile Logo */}
+                <Link href={demoData.logo.url} className="md:hidden flex items-center">
+                  <Image
+                    src={demoData.logo.src}
+                    alt={demoData.logo.alt}
+                    width={30}
+                    height={30}
+                    className="h-8 w-8"
+                  />
+                  <span className="ml-2 text-lg font-bold text-black dark:text-white">
+                    {demoData.logo.title}
+                  </span>
+                </Link>
+      
+                {/* Desktop Logo */}
+                <Link href={demoData.logo.url} className="hidden md:flex items-center">
+                  <Image
+                    src={demoData.logo.src}
+                    alt={demoData.logo.alt}
+                    width={40}
+                    height={40}
+                    className="h-10 w-10"
+                  />
+                  <span className="ml-2 text-xl font-bold text-black dark:text-white">
+                    {demoData.logo.title}
+                  </span>
+                </Link>
+      
+                {/* Hamburger icon for mobile */}
+                <div className="md:hidden flex-grow flex justify-end">
+                  <button onClick={() => {
+                    setIsMobileMenuOpen(!isMobileMenuOpen);
+                    if (isMobileMenuOpen) {
+                      setActive(null); // Reset active state when closing mobile menu
+                    }
+                  }}>
+                    {isMobileMenuOpen ? (
+                      <XIcon className="h-6 w-6 text-white" />
+                    ) : (
+                      <MenuIcon className="h-6 w-6 text-white" />
+                    )}
+                  </button>
+                </div>
               </div>
-            ) : null}
-          </MenuItem>
-        ))}
-      </Menu>
+      {/* Menu */}
+      <div
+        className={cn(
+          "md:flex md:items-center md:justify-center",
+          { hidden: !isMobileMenuOpen, flex: isMobileMenuOpen },
+          "flex-col md:flex-row absolute md:relative top-full md:top-auto left-0 md:left-auto w-full md:w-auto bg-black md:bg-transparent border-t md:border-t-0 border-white/[0.2] md:border-transparent py-4 md:py-0"
+        )}
+      >
+        <Menu setActive={setActive}>
+          {demoData.menu.map((item) => (
+            <MenuItem
+              key={item.title}
+              setActive={setActive}
+              active={active}
+              item={item.title}
+              href={item.items ? undefined : item.url}
+            >
+              {item.items ? (
+                <div className="text-sm flex flex-col gap-2 p-2">
+                  {item.items.map((subItem) => (
+                    subItem.icon ? (
+                      <ProductItem
+                        key={subItem.url}
+                        title={subItem.title}
+                        href={subItem.url}
+                        icon={subItem.icon}
+                        description={subItem.description}
+                      />
+                    ) : (
+                      <HoveredLink key={subItem.url} href={subItem.url}>{subItem.title}</HoveredLink>
+                    )
+                  ))}
+                </div>
+              ) : null}
+            </MenuItem>
+          ))}
+        </Menu>
+      </div>
     </div>
   );
 }
@@ -176,7 +234,7 @@ function Navbar({ className }: { className?: string }) {
 export function NewNavbarDemo() {
   return (
     <div className="relative w-full flex items-center justify-center">
-      <Navbar className="top-2" />
+      <Navbar />
     </div>
   );
 }

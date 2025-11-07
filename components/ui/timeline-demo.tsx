@@ -13,7 +13,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/kb.png"
+              src="./kb.png"
               alt="startup template"
               fill
               style={{ objectFit: "contain" }}
@@ -31,7 +31,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/newtre.png"
+              src="./newtre.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -49,7 +49,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/threpo.png"
+              src="./threpo.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -67,7 +67,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/tutlabs.png"
+              src="./tutlabs.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -85,7 +85,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/podweb.png"
+              src="./podweb.png"
               alt="hero template"
               fill
               style={{ objectFit: "contain" }}
@@ -103,7 +103,7 @@ export function TimelineDemo() {
           </p>
           <div className="relative h-60 max-w-sm">
             <Image
-              src="/cons.png"
+              src="./cons.png"
               alt="cybersecurity services"
               fill
               style={{ objectFit: "contain" }}

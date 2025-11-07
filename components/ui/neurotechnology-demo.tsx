@@ -20,19 +20,19 @@ React.useEffect( () => {
 
 const images = [
 {
-src: '/neural-frontier.png',
+src: './neural-frontier.png',
 alt: 'Neural Frontier',
 },
 {
-src: '/aineural.png',
+src: './aineural.png',
 alt: 'AI Neural',
 },
 {
-src: '/research-breakthroughs.png',
+src: './research-breakthroughs.png',
 alt: 'Research Breakthroughs',
 },
 {
-src: '/bci.png',
+src: './bci.png',
 alt: 'BCI',
 },
 ];
